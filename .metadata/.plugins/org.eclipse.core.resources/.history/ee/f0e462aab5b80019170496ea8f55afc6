@@ -1,0 +1,5 @@
+package com.greatdigitallab.springhibernatedemo.entity;
+
+public class Customer {
+
+}

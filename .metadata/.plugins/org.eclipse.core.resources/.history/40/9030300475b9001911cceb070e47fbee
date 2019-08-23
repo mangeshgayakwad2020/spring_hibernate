@@ -1,0 +1,16 @@
+package com.greatdigitallab.springhibernatedemo.dao;
+
+import java.util.List;
+
+import com.greatdigitallab.springhibernatedemo.entity.Customer;
+
+
+public class CustomerDAOImpl implements CustomerDAO {
+
+	@Override
+	public List<Customer> getCustomerList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

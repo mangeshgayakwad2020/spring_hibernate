@@ -1,0 +1,5 @@
+package com.greatdigitallab.springhibernatedemo.service;
+
+public interface CustomerService {
+
+}

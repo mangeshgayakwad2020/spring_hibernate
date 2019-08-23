@@ -1,0 +1,18 @@
+package com.greatdigitallab.springhibernatedemo.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.greatdigitallab.springhibernatedemo.entity.Customer;
+
+@Service
+public class CustomerServiceImpl implements CustomerService {
+
+	@Override
+	public List<Customer> getCustomerList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

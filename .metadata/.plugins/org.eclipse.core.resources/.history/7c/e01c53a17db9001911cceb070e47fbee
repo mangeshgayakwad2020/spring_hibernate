@@ -1,0 +1,32 @@
+package com.greatdigitallab.springhibernatedemo.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.greatdigitallab.springhibernatedemo.dao.CustomerDAO;
+import com.greatdigitallab.springhibernatedemo.entity.Customer;
+
+@Controller
+@RequestMapping("/customer")
+public class CustomerController {
+
+	// Inject the Customer DAO
+	@Autowired
+	private CustomerDAO customerDAO;
+
+	@RequestMapping("/list")
+	public String getCustomerList(Model model) {
+
+		// Get the Customer List
+		List<Customer> customerList = customerDAO.getCustomerList();
+
+		// Add the Customer List to the Model
+		model.addAttribute("customerList", customerList);
+		
+		return "customer-list";
+	}
+}

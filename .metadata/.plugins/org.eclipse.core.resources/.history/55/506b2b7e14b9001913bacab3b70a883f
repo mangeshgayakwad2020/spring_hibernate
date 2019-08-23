@@ -1,0 +1,21 @@
+package com.greatdigitallab.springhibernatedemo.entity;
+
+import javax.annotation.Generated;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="customer")
+public class Customer {
+
+	@Id
+	@Generate
+	int id;
+	
+	String firstName;
+	
+	String lastName;
+	
+	String email;
+}

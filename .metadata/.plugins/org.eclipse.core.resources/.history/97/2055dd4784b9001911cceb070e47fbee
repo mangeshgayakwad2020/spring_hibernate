@@ -1,0 +1,15 @@
+package com.greatdigitallab.springhibernatedemo.service;
+
+import java.util.List;
+
+import com.greatdigitallab.springhibernatedemo.entity.Customer;
+
+public class CustomerServiceImpl implements CustomerService {
+
+	@Override
+	public List<Customer> getCustomerList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

@@ -1,0 +1,53 @@
+package com.greatdigitallab.springhibernatedemo.dao;
+
+import java.util.List;
+
+import javax.persistence.Query;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.greatdigitallab.springhibernatedemo.entity.Customer;
+
+@Repository
+public class CustomerDAOImpl implements CustomerDAO {
+
+	// Get the Hibernate Session Factory
+	@Autowired
+	private SessionFactory sessionFactory;
+	
+	// Retrieve the Customer List from database
+	@Override
+	public List<Customer> getCustomerList() {
+		
+		// Get the Hibernate Session
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		// Create Query
+		Query fetchQuery = currentSession.createQuery("from Customer order by lastName", Customer.class);
+		
+		// Get the result set
+		List<Customer> customerList = fetchQuery.getResultList();
+		
+		return customerList;
+	}
+
+	@Override
+	public void saveCustomer(Customer customer) {
+
+		// Get the Hibernate current session
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		// Save the Customer
+		currentSession.save(customer);
+	}
+
+	@Override
+	public Customer getCustomer(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

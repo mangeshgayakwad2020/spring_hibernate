@@ -1,0 +1,5 @@
+package com.greatdigitallab.springhibernatedemo.dao;
+
+public class CustomerDAO {
+
+}
